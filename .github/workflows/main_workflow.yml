@@ -11,7 +11,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - name: Super-Linter
+      - name: Linter execution
         uses: github/super-linter@v4.9.4
-
-   
+        env:
+            DEFAULT_BRANCH: nodejs_example
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            LINTER_RULES_PATH: /
+            JAVASCRIPT_ES_CONFIG_FILE: .eslintrc.json
+            VALIDATE_JAVASCRIPT_ES: true
