@@ -1,0 +1,18 @@
+name: main_workflow
+
+
+on:
+  
+  push:
+    branches: nodejs_linter_job
+ 
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Super-Linter
+        uses: github/super-linter@v4.9.4
+
+   
