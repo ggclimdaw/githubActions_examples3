@@ -1,5 +1,5 @@
 {
-  "name": "githubactions_exemples2",
+  "name": "githubActions_examples3",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ggclimdaw/githubActions_exemples2.git"
+    "url": "git+https://github.com/ggclimdaw/githubActions_examples3.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ggclimdaw/githubActions_exemples2/issues"
+    "url": "https://github.com/ggclimdaw/githubActions_examples3/issues"
   },
-  "homepage": "https://github.com/ggclimdaw/githubActions_exemples2#readme",
+  "homepage": "https://github.com/ggclimdaw/githubActions_examples3#readme",
   "dependencies": {
     "express": "^4.18.1"
   },
