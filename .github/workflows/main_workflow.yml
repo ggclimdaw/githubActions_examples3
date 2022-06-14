@@ -2,7 +2,7 @@ name: main_workflow
 
 on:
   push:
-    branches: nodejs_nodeversions_job
+    branches: nodejs_environment_job
 
 jobs:
   build:
@@ -46,7 +46,7 @@ jobs:
 
   tecerjob:
     runs-on: ubuntu-latest
-    name: Hola 2DAW
+    name: environment_test_execution
     steps:
     - name: Practica 6 step
       id: DESTINATION_PERSON
