@@ -10,6 +10,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Setting node version
+        uses: action/setup-node@v2
+        with:
+          node-version: 10, 12
+
+    steps:
       - uses: actions/checkout@v3
       - name: Linter execution
         uses: github/super-linter@v4.9.4
