@@ -7,17 +7,13 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v3
-      - name: Setting node version
-      - uses: actions/setup-node@v2
-        with:
-          node-version: 10, 12      
-      
       - name: Linter execution
         uses: github/super-linter@v4.9.4
         env:
-          DEFAULT_BRANCH: nodejs_nodeversions_job
+          DEFAULT_BRANCH: nodejs_example
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           LINTER_RULES_PATH: /
           JAVASCRIPT_ES_CONFIG_FILE: eslintrc.json
