@@ -7,22 +7,21 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-        node-version: [10, 12]
-
-
+    
     steps:
-      
-      - name: Checkout Code
       - uses: actions/checkout@v3
-
-      - name: Setting node version
+      - name: Checkout Code
+        uses: ./
+      
       - uses: actions/setup-node@v2
-
+      - name: Setting node version
+        uses: ./
+        with:
+          node-version: 10, 12
+      
+      - uses: github/super-linter@v4
       - name: Linter execution
-        uses: github/super-linter@v4
+        uses: ./        
         env:
             DEFAULT_BRANCH: nodejs_example
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
