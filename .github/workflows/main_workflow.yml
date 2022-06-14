@@ -11,17 +11,14 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Checkout Code
-        uses: ./
       
       - uses: actions/setup-node@v2
       - name: Setting node version
-        uses: ./
         with:
           node-version: 10, 12
       
       - uses: github/super-linter@v4
       - name: Linter execution
-        uses: ./        
         env:
             DEFAULT_BRANCH: nodejs_example
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
