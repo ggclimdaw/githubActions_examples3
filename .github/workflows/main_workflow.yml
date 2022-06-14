@@ -1,7 +1,6 @@
 name: main_workflow
 
 on:
-  
   push:
     branches: nodejs_nodeversions_job
 
@@ -14,12 +13,15 @@ jobs:
 
 
     steps:
+      
+      - name: Checkout Code
+      - uses: actions/checkout@v3
+
       - name: Setting node version
       - uses: actions/setup-node@v2
-      
-      - uses: actions/checkout@v3
+
       - name: Linter execution
-        uses: github/super-linter@v4.9.4
+        uses: github/super-linter@v4
         env:
             DEFAULT_BRANCH: nodejs_example
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
