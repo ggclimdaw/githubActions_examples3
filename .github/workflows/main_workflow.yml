@@ -13,7 +13,7 @@ jobs:
       - name: Setting node version
         uses: actions/setup-node@v2
         with:
-          node-version: 12.12.0
+          node-version: 10.10.0, 12.12.0
 
       - uses: actions/checkout@v3
       - name: Linter execution
