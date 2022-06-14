@@ -21,4 +21,4 @@ jobs:
             VALIDATE_JAVASCRIPT_ES: true
 
       - name: Setting node version
-      - uses: action/setup-node@v2
+      - uses: actions/setup-node@v2
