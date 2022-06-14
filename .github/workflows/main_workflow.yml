@@ -24,7 +24,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Linter execution
-        uses: eslintrc/github-action@draft
+        uses: github/super-linter@v4.9.4
         env:
             DEFAULT_BRANCH: nodejs_example
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
