@@ -1,0 +1,43 @@
+name: autoinformacion
+
+on:
+
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+
+  workflow_dispatch:
+
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v3.1.0
+
+      with:
+        name: informe_publico
+    
+        path: https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov/documentos/Informe_Comunicacion_20210127.ods
+
+    Available Options:
+      warn: Output a warning but do not fail the action
+      error: Fail the action with an error message
+      ignore: Do not output any warnings or errors, the action does not fail
+
+      if-no-files-found: war
+      retention-days: 0
+
+  
+    steps:
+    
+    - name: Descargar informe
+      uses: actions/download-artifact@v3.0.0
+      with:
+        name: descargar_informe
+        path: githubActions_examples3/descargas   
