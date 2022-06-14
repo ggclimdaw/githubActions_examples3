@@ -47,10 +47,11 @@ jobs:
   tecerjob:
     runs-on: ubuntu-latest
     name: environment_test_execution
+
     steps:
     - name: Practica 6 step
       id: DESTINATION_PERSON
-      uses: actions/github-actions-DESTINATION_PERSON@v1.0
+      uses: adeloyedeji/github-actions-hello@v1.0
       with:
         who-to-greet: 'Hello 2DAW'
     # Use the output from the `hello` step
