@@ -26,7 +26,7 @@ jobs:
       - name: Linter execution
         uses: github/super-linter@v4.9.4
         env:
-            DEFAULT_BRANCH: nodejs_example
+            DEFAULT_BRANCH: nodejs_nodeversions_job
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             LINTER_RULES_PATH: /
             JAVASCRIPT_ES_CONFIG_FILE: eslintrc.json
