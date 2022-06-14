@@ -43,3 +43,17 @@ jobs:
           npm install jest
           npm install
           npm test
+
+  tecerjob:
+    runs-on: ubuntu-latest
+    name: Hola 2DAW
+    steps:
+    - name: Practica 6 step
+      id: DESTINATION_PERSON
+      uses: actions/github-actions-hello@v1.0
+      with:
+        who-to-greet: 'Hello 2DAW'
+    # Use the output from the `hello` step
+    - name: Get the output time
+      run: echo "The time was ${{ steps.DESTINATION_PERSON.outputs.time }}"
+
